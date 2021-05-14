@@ -1,6 +1,6 @@
 NASM = nasm
 NFLAGS = -felf64
-SRCS = $(wildcard *.S)
+SRCS = $(wildcard libasm/*.S)
 OBJS = $(SRCS:.S=.o)
 CC = gcc
 MAIN = my_libasm
