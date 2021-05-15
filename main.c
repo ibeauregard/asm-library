@@ -4,6 +4,7 @@ size_t strlen_(const char* string);
 char* strchr_(const char* string, int c);
 void* memset_(void* ptr, int value, size_t num);
 void* memcpy_(void* restrict dest, const void* restrict src, size_t num);
+ssize_t read_(int fd, void* buf, size_t count);
 ssize_t write_(int fd, const void* buf, size_t count);
 
 int main(void)
