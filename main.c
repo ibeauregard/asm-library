@@ -4,6 +4,7 @@ size_t strlen_(const char* string);
 char* strchr_(const char* string, int c);
 void* memset_(void* ptr, int value, size_t num);
 void* memcpy_(void* restrict dest, const void* restrict src, size_t num);
+ssize_t write_(int fd, const void* buf, size_t count);
 
 int main(void)
 {
@@ -29,6 +30,8 @@ int main(void)
     
     printf("memcpy_(message, \"ALMOST\", 6): %s\nExpected: ALMOST every programmer should know memset!\n\n",
             (char*) memcpy_(message, "ALMOST", 6));
+    
+    printf("\nReturn value from write_(1, \"Write syscall\", 13): %zd\nExpected: 13\n\n", write_(1, "Write syscall", 13));
 
     return 0;    
 }
