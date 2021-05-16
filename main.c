@@ -9,6 +9,7 @@ char* strchr_(const char* string, int c);
 char* index_(const char* string, int c);
 void* memset_(void* ptr, int value, size_t num);
 void* memcpy_(void* restrict dest, const void* restrict src, size_t num);
+void* memmove_(void* restrict dest, const void* restrict src, size_t num);
 int strcmp_(const char *s1, const char *s2);
 int strncmp_(const char *s1, const char *s2, size_t num);
 int strcasecmp_(const char *s1, const char *s2);
@@ -64,6 +65,23 @@ int main(void)
     printf("memcpy_(message, \"ALMOST\", 6): %s\nExpected: %s\n\n",
             (char*) memcpy_(message_, "ALMOST", 6),
             (char*) memcpy(message, "ALMOST", 6));
+    
+    /* memmove */
+    strcpy(message_, "memmove can be very useful......");
+    memmove_(message_ + 20, message_ + 15, 11);
+    strcpy(message, "memmove can be very useful......");
+    memmove(message + 20, message + 15, 11);
+    printf("memmove_(message + 20, message + 15, 11): %s\nExpected: %s\n\n",
+            message_,
+            message);
+    
+    strcpy(message_, "memmove can be very useful......");
+    memmove_(message_ + 15, message_ + 20, 13);
+    strcpy(message, "memmove can be very useful......");
+    memmove(message + 15, message + 20, 13);
+    printf("memmove_(message + 15, message + 20, 13): %s\nExpected: %s\n\n",
+            message_,
+            message);
 
     /* strcmp */
     printf("strcmp_(\"\", \"\"): %d\nExpected: %d\n\n",
