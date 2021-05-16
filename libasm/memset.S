@@ -1,4 +1,4 @@
-        global  memset_
+        global  memset_ ; Implements: https://man7.org/linux/man-pages/man3/memset.3.html
 
         section .text
 

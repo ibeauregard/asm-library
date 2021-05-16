@@ -1,4 +1,4 @@
-        global  memcpy_
+        global  memcpy_ ; Implements: https://man7.org/linux/man-pages/man3/memcpy.3.html
 
         section .text
 

@@ -1,4 +1,4 @@
-        global  strlen_
+        global  strlen_ ; Implements: https://man7.org/linux/man-pages/man3/strlen.3.html
 
         section .text
 

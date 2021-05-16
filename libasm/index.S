@@ -1,4 +1,4 @@
-        global  index_
+        global  index_ ; Implements: https://man7.org/linux/man-pages/man3/index.3.html
         extern  strchr_
 
         section .text

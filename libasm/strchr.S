@@ -1,4 +1,4 @@
-        global  strchr_
+        global  strchr_ ; Implements: https://man7.org/linux/man-pages/man3/strchr.3.html
 
         section .text
 

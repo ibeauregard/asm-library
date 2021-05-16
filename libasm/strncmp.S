@@ -1,4 +1,4 @@
-        global  strncmp_
+        global  strncmp_ ; Implements: https://man7.org/linux/man-pages/man3/strcmp.3.html
 
         section .text
 

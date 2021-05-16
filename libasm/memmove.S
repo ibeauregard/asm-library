@@ -1,4 +1,4 @@
-        global  memmove_
+        global  memmove_ ; Implements: https://man7.org/linux/man-pages/man3/memmove.3.html
         extern  memcpy_
 
         section .text
